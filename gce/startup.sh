@@ -18,7 +18,7 @@ apt-get update
 apt-get -y install jq
 
 # access secret from secretsmanager
-secrets=$(gcloud secrets versions access latest --secret="runner-secret")
+secrets=$(gcloud secrets versions access latest --secret="gha-runner-distro-secret")
 # set secrets as env vars
 # shellcheck disable=SC2206
 secretsConfig=($secrets)
